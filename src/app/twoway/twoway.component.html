@@ -1,0 +1,13 @@
+
+
+
+<div class="w-[80%] mx-auto">
+    <p class="text-green-400 text-2xl font-semibold">///////////////////twoway works!/////////////////////////</p>
+
+    <input type="text" #HOLDMYVAlULE [value]="Massege" (keyup)="MYonChange(HOLDMYVAlULE.value)" class="border-2 p-4"> <br>
+    <!-- to short  -->
+    <input type="text" [(ngModel)]="Massege" class="border-2 p-4"><br>
+    Your Massege  : {{Massege}}
+
+   
+</div>

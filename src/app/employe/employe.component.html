@@ -1,0 +1,76 @@
+<div class="px-10">
+    <div class="w-full text-center mt-10 text-green-500 font-semibold text-xl">
+        /////////////////////////////////////Employe works!////////////////////////////////////////////////////</div>
+
+    <div class="text-center pb-20">
+        @for (item of MyArray; track $index;let even= $even;let add = $odd;let count =$count;let last = $last) {
+        <p>Total item is : {{count}}</p>
+        <p>Last item is : {{last}}</p>
+        <h1 class="myred">{{item?.id}}</h1>
+        <h1>{{item?.name}}</h1>
+        }@empty {
+        <p>No Data Found</p>
+        }
+    </div>
+    <button (click)="HandleCity()">Sumit</button>
+    <p class="text-2xl text-center">{{city}}</p>
+
+
+    <p>{{dataObject.id}}</p>
+    <p>{{dataObject.name}}</p>
+
+
+    <td>
+        <table [border]="1" class="border-2 ml-40">
+            <tr>
+                <td [attr.class]="class">Header</td>
+                <!-- Attribute binding  -->
+            </tr>
+            <tr>
+                <td>Cols1</td>
+                <td>ValueCols1</td>
+            </tr>
+            <tr>
+                <td>Cols2</td>
+                <td>ValueCols2</td>
+            </tr>
+
+        </table>
+    </td>
+    <div class="flex justify-center">
+        <div>
+            <h1>{{name}}</h1>
+            <!-- interpolation binding  direct variable-->
+            <img src="{{myImage}}" alt="vishal mern" class="w-64">
+        </div>
+    </div>
+    <div class="flex justify-center">
+        <div>
+            <h1 [innerHTML]="name"></h1>
+            <!-- Property binding    name is want variable   -->
+            <img [src]="myImage" alt="vishal mern" class="w-64">
+        </div>
+    </div>
+
+    <div class="flex justify-center">
+        <div class="">
+            <button (click)="handleToggale()" class="block bg-orange-600 p-4    ">Submit Change </button>
+            <!-- interpolation binding -->
+            <button [disabled]="toggale" class="block">Click  interpolation Me</button>
+            <!-- Property binding -->
+            <button disabled="{{toggale}}" class="block">Click Property Me</button>
+        </div>
+        <!-- interpokation {{}} not work on boolean -->
+    </div>
+    <div>
+        <h1 [class]="MYVARIABLE">BBBBBB</h1> 
+        <!-- this is varibale MYVARIABLE  Property binding  -->
+        <h1 class="{{MYVARIABLE}}">BBBBBB</h1> 
+        <!--  this is varibale MYVARIABLE  interpokation binding -->
+    </div>
+    <div>
+        <!-- after classs proparty is classs name and truefalse is varriabple -->
+        <h1 [class.myred]="!truefalse">BBBKKK</h1> 
+        <!-- this is varibale MYVARIABLE  Property binding  -->
+    </div>
+</div>

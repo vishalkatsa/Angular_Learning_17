@@ -1,0 +1,43 @@
+<p>pipes works!</p>
+<div class="w-[80%] mx-auto">
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    <h1>{{title | uppercase}}</h1>
+    <h1>{{title | lowercase}}</h1>
+    <h1>{{title | titlecase}}</h1>
+    <!-- Parameterize -->
+    <h1>{{title | slice: 0: 5}}</h1>
+    <!-- Parameterize -->
+    <h1>{{dataJson | json}}</h1>
+
+    ///////////////////// decimal Pipes in Angular 17 /////////////////////////////////////////
+
+    <p>12.4127964 | Number</p>
+    <p class="text-red-600 font-semibold text-xl">{{12.4127964 | number: '2.1-2'}}</p>
+
+    ////////////////////////// percent Pipes in Angular 17 /////////////////////////////////
+    2.5
+    <p class="text-red-600 font-semibold text-xl">{{2.5 | percent}}</p>
+
+
+
+
+    //////////////////////////currency Pipes //////////////////////////////
+
+    <p>{{12 | currency}}</p>
+    <p>{{12 | currency:'INR'}}</p>
+    <p>{{ 12 | currency:'INR':true:'1.2-2' }}</p>
+
+
+    //////////////////////////currency Pipes //////////////////////////////
+    <p>date :{{currentDate}}</p>
+    <p>date :{{currentDate | date}}</p>
+    <p>shortDate :{{currentDate | date:'shortDate'}}</p>
+    <p>longDate :{{currentDate | date:'longDate'}}</p>
+    <p>fullDate :{{currentDate | date:'fullDate'}}</p>
+    <p>DDMMYYYY :{{currentDate | date:'dd/MM/YYYY'}}</p>
+
+
+
+
+
+</div>

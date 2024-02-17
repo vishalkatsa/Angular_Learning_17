@@ -1,0 +1,30 @@
+<p>login works!</p>
+<div>Input Value {{PData}}</div>
+<button>Me</button>
+<button>Ji</button>
+<button>Li</button>
+<button>Fi</button>
+
+
+<br>
+<!-- Child to Parent data or value transfar -->
+<div>Child Input</div>
+<input class="border-2" type="text" #CCOM (keyup)="sendData(CCOM.value)"> 
+
+<div class="flex justify-center text-xl">
+    <input class="border-2 py-2 px-4 " type="text" #inputvaluemy (keyup)="0">
+
+@switch (inputvaluemy.value) {
+    @case('Ram'){
+        <div>Ram</div>
+    }
+    @case ('Vishal') {
+        <div>Vishal</div>
+    }
+    @default {
+        <div>No Data matched</div>
+    }
+
+}
+    
+</div>
